@@ -108,7 +108,7 @@
             this.LogUsernameLabel.ForeColor = System.Drawing.Color.Maroon;
             this.LogUsernameLabel.Location = new System.Drawing.Point(24, 156);
             this.LogUsernameLabel.Name = "LogUsernameLabel";
-            this.LogUsernameLabel.Size = new System.Drawing.Size(76, 16);
+            this.LogUsernameLabel.Size = new System.Drawing.Size(75, 16);
             this.LogUsernameLabel.TabIndex = 4;
             this.LogUsernameLabel.Text = "Username";
             // 
@@ -120,7 +120,7 @@
             this.LogPasswordLabel.ForeColor = System.Drawing.Color.Maroon;
             this.LogPasswordLabel.Location = new System.Drawing.Point(25, 230);
             this.LogPasswordLabel.Name = "LogPasswordLabel";
-            this.LogPasswordLabel.Size = new System.Drawing.Size(75, 16);
+            this.LogPasswordLabel.Size = new System.Drawing.Size(74, 16);
             this.LogPasswordLabel.TabIndex = 5;
             this.LogPasswordLabel.Text = "Password";
             // 
@@ -132,17 +132,18 @@
             this.RegFirstnameLabel.ForeColor = System.Drawing.Color.Maroon;
             this.RegFirstnameLabel.Location = new System.Drawing.Point(349, 125);
             this.RegFirstnameLabel.Name = "RegFirstnameLabel";
-            this.RegFirstnameLabel.Size = new System.Drawing.Size(79, 16);
+            this.RegFirstnameLabel.Size = new System.Drawing.Size(78, 16);
             this.RegFirstnameLabel.TabIndex = 6;
             this.RegFirstnameLabel.Text = "Firstname";
             // 
             // LogUsernameBox
             // 
-            this.LogUsernameBox.Location = new System.Drawing.Point(28, 175);
+            this.LogUsernameBox.Location = new System.Drawing.Point(27, 175);
             this.LogUsernameBox.Multiline = true;
             this.LogUsernameBox.Name = "LogUsernameBox";
             this.LogUsernameBox.Size = new System.Drawing.Size(198, 20);
             this.LogUsernameBox.TabIndex = 13;
+            this.LogUsernameBox.TextChanged += new System.EventHandler(this.LogUsernameBox_TextChanged);
             // 
             // LogPassBox
             // 
@@ -191,7 +192,6 @@
             this.RegUsername.Name = "RegUsername";
             this.RegUsername.Size = new System.Drawing.Size(195, 20);
             this.RegUsername.TabIndex = 19;
-            this.RegUsername.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // RegStatusBox
             // 
@@ -200,7 +200,6 @@
             this.RegStatusBox.Name = "RegStatusBox";
             this.RegStatusBox.Size = new System.Drawing.Size(121, 21);
             this.RegStatusBox.TabIndex = 20;
-            this.RegStatusBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // RegLastnameLabel
             // 
@@ -210,7 +209,7 @@
             this.RegLastnameLabel.ForeColor = System.Drawing.Color.Maroon;
             this.RegLastnameLabel.Location = new System.Drawing.Point(349, 190);
             this.RegLastnameLabel.Name = "RegLastnameLabel";
-            this.RegLastnameLabel.Size = new System.Drawing.Size(76, 16);
+            this.RegLastnameLabel.Size = new System.Drawing.Size(75, 16);
             this.RegLastnameLabel.TabIndex = 22;
             this.RegLastnameLabel.Text = "Lastname";
             // 
@@ -222,7 +221,7 @@
             this.RegUsernameLabel.ForeColor = System.Drawing.Color.Maroon;
             this.RegUsernameLabel.Location = new System.Drawing.Point(349, 258);
             this.RegUsernameLabel.Name = "RegUsernameLabel";
-            this.RegUsernameLabel.Size = new System.Drawing.Size(76, 16);
+            this.RegUsernameLabel.Size = new System.Drawing.Size(75, 16);
             this.RegUsernameLabel.TabIndex = 23;
             this.RegUsernameLabel.Text = "Username";
             // 
@@ -234,7 +233,7 @@
             this.RegPassLabel.ForeColor = System.Drawing.Color.Maroon;
             this.RegPassLabel.Location = new System.Drawing.Point(612, 125);
             this.RegPassLabel.Name = "RegPassLabel";
-            this.RegPassLabel.Size = new System.Drawing.Size(75, 16);
+            this.RegPassLabel.Size = new System.Drawing.Size(74, 16);
             this.RegPassLabel.TabIndex = 24;
             this.RegPassLabel.Text = "Password";
             // 
@@ -246,7 +245,7 @@
             this.RegConfirmPassLabel.ForeColor = System.Drawing.Color.Maroon;
             this.RegConfirmPassLabel.Location = new System.Drawing.Point(609, 190);
             this.RegConfirmPassLabel.Name = "RegConfirmPassLabel";
-            this.RegConfirmPassLabel.Size = new System.Drawing.Size(134, 16);
+            this.RegConfirmPassLabel.Size = new System.Drawing.Size(133, 16);
             this.RegConfirmPassLabel.TabIndex = 25;
             this.RegConfirmPassLabel.Text = "Confirm Password";
             // 
@@ -258,7 +257,7 @@
             this.RegStatusLabel.ForeColor = System.Drawing.Color.Maroon;
             this.RegStatusLabel.Location = new System.Drawing.Point(612, 258);
             this.RegStatusLabel.Name = "RegStatusLabel";
-            this.RegStatusLabel.Size = new System.Drawing.Size(54, 16);
+            this.RegStatusLabel.Size = new System.Drawing.Size(53, 16);
             this.RegStatusLabel.TabIndex = 26;
             this.RegStatusLabel.Text = "Status";
             // 
@@ -267,7 +266,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(877, 450);
+            this.ClientSize = new System.Drawing.Size(873, 450);
             this.Controls.Add(this.RegStatusLabel);
             this.Controls.Add(this.RegConfirmPassLabel);
             this.Controls.Add(this.RegPassLabel);
