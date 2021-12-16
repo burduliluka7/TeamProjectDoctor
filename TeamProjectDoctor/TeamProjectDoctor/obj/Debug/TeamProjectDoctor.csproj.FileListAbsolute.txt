@@ -7,3 +7,13 @@ C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\TeamP
 C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.csproj.CoreCompileInputs.cache
 C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.exe
 C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.pdb
+E:\school\coding\team project\TeamProjectDoctor\TeamProjectDoctor\bin\Debug\TeamProjectDoctor.exe.config
+E:\school\coding\team project\TeamProjectDoctor\TeamProjectDoctor\bin\Debug\TeamProjectDoctor.exe
+E:\school\coding\team project\TeamProjectDoctor\TeamProjectDoctor\bin\Debug\TeamProjectDoctor.pdb
+E:\school\coding\team project\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.csprojAssemblyReference.cache
+E:\school\coding\team project\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.Form1.resources
+E:\school\coding\team project\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.Properties.Resources.resources
+E:\school\coding\team project\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.csproj.GenerateResource.cache
+E:\school\coding\team project\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.csproj.CoreCompileInputs.cache
+E:\school\coding\team project\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.exe
+E:\school\coding\team project\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.pdb
