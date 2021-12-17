@@ -17,14 +17,11 @@ namespace TeamProjectDoctor
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e) { }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
+        private void Form1_Load(object sender, EventArgs e) { 
+        
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void LogUsernameBox_TextChanged(object sender, EventArgs e)
         {
 
         }
