@@ -38,3 +38,12 @@ C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\obj\D
 C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.csproj.CoreCompileInputs.cache
 C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.exe
 C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.pdb
+C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\bin\Debug\System.Security.AccessControl.dll
+C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\bin\Debug\System.Security.Permissions.dll
+C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\bin\Debug\System.Security.AccessControl.xml
+C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\bin\Debug\System.Security.Permissions.xml
+C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\User\OneDrive\Desktop\Project\TeamProjectDoctor\TeamProjectDoctor\obj\Debug\TeamProjectDoctor.csproj.CopyComplete

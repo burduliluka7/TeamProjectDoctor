@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\packages",
+    "\\TeamProjectDoctor",
+    "\\TeamProjectDoctor\\Properties"
   ],
-  "SelectedNode": "\\TeamProjectDoctor.sln",
+  "SelectedNode": "\\TeamProjectDoctor\\SqlCon.cs",
   "PreviewInSolutionExplorer": false
 }
