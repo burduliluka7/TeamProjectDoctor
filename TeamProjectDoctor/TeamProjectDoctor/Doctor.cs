@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace TeamProjectDoctor
 {
-    public class User
+    class Doctor
     {
         public int id;
         public string username;
         public string firstname;
         public string lastname;
         public string password;
-        public string status;
+        public int rank;
+        public string speciality;
+        public string bio;
+        public string description;
+
     }
 }
