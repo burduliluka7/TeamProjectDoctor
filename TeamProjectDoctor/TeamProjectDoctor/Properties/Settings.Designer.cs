@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TeamProjectDoctor.Properties
+namespace Exampleproject.Properties
 {
 
 
