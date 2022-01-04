@@ -24,8 +24,8 @@ namespace Exampleproject
         {   
             // აბრუნებს არსებობს თუ არა ეგ ექიმი
             connection= new SqlConnection(conecstring);
-            Command.CommandType = CommandType.StoredProcedure;
             Command = new SqlCommand("FechDoctor", connection);
+            Command.CommandType = CommandType.StoredProcedure;
             SqlParameter param = new SqlParameter("@Username",SqlDbType.VarChar);
             param.Value = username;
             Command.Parameters.Add(param);
@@ -49,8 +49,8 @@ namespace Exampleproject
             // აბრუნებს არსებობს თუ არა პაციენტი
             
             connection = new SqlConnection(conecstring);
-            Command.CommandType = CommandType.StoredProcedure;
             Command = new SqlCommand("FechPatient", connection);
+            Command.CommandType = CommandType.StoredProcedure;
             SqlParameter param = new SqlParameter("@Username", SqlDbType.VarChar);
             param.Value = username;
             Command.Parameters.Add(param);
@@ -73,8 +73,8 @@ namespace Exampleproject
         {   
             //არეგისტრირებს ექმის
             connection = new SqlConnection(conecstring);
-            Command.CommandType = CommandType.StoredProcedure;
             Command = new SqlCommand("Register_Doctor", connection);
+            Command.CommandType = CommandType.StoredProcedure;
             SqlParameter[] param = new SqlParameter[7];
             param[0] = new SqlParameter("@Name",SqlDbType.VarChar);
             param[1] = new SqlParameter("@LastName", SqlDbType.VarChar);
@@ -103,9 +103,10 @@ namespace Exampleproject
         {   
             // არეგისტრირებს პაციენტს 
             connection = new SqlConnection(conecstring);
-            Command.CommandType = CommandType.StoredProcedure;
             Command = new SqlCommand("Register_Patient", connection);
-            SqlParameter[] param = new SqlParameter[4];
+            Command.CommandType = CommandType.StoredProcedure;
+            
+            SqlParameter[] param = new SqlParameter[5];
             param[0] = new SqlParameter("@Name", SqlDbType.VarChar);
             param[1] = new SqlParameter("@LastName", SqlDbType.VarChar);
             param[2] = new SqlParameter("@Username", SqlDbType.VarChar);
@@ -130,14 +131,16 @@ namespace Exampleproject
         {   
             //ყველა შენ მესსიგს გიბრუნებს
             connection = new SqlConnection(conecstring);
-            Command.CommandType = CommandType.StoredProcedure;
             Command = new SqlCommand("GetMesseges", connection);
-            SqlParameter param = new SqlParameter("@Username", SqlDbType.Int);
-            param.Value = username;
+            Command.CommandType = CommandType.StoredProcedure;
+            SqlParameter param = new SqlParameter("@Username", SqlDbType.VarChar);
+            string hold = Encrypte.Encrypt(username);
+            param.Value = hold.ToString();
             Command.Parameters.Add(param);
             connection.Open();
             Command.ExecuteNonQuery();
             connection.Close();
+
             Table = new DataTable();
             Adapter = new SqlDataAdapter(Command);
             Adapter.Fill(Table);
@@ -170,8 +173,8 @@ namespace Exampleproject
         {   
             //მესსიჯს აგზავნის
             connection = new SqlConnection(conecstring);
-            Command.CommandType = CommandType.StoredProcedure;
             Command = new SqlCommand("SendMessege", connection);
+            Command.CommandType = CommandType.StoredProcedure;
             SqlParameter[] param = new SqlParameter[4];
             param[0]= new SqlParameter("@Id", SqlDbType.Int);
             param[1] = new SqlParameter("@type", SqlDbType.VarChar);
