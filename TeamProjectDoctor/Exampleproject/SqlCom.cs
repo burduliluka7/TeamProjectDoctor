@@ -20,9 +20,9 @@ namespace Exampleproject
         private static DataTable Table;
         private static SqlDataAdapter Adapter;
 
-        public static bool FechDoctor(string username)
+        public static bool FechDoctorInfo(string username)
         {   
-            // აბრუნებს არსებობს თუ არა ეგ ექიმი
+           
             connection= new SqlConnection(conecstring);
             Command = new SqlCommand("FechDoctor", connection);
             Command.CommandType = CommandType.StoredProcedure;
@@ -43,6 +43,27 @@ namespace Exampleproject
                 return true;
             }
             return false;
+        }
+        public static DataTable FechDoctor(string username)
+        {
+            // აბრუნებს არსებობს თუ არა ეგ ექიმი
+            connection = new SqlConnection(conecstring);
+            Command = new SqlCommand("FechDoctor", connection);
+            Command.CommandType = CommandType.StoredProcedure;
+            SqlParameter param = new SqlParameter("@Username", SqlDbType.VarChar);
+            param.Value = username;
+            Command.Parameters.Add(param);
+
+
+            connection.Open();
+            Command.ExecuteNonQuery();
+            connection.Close();
+            Table = new DataTable();
+            Adapter = new SqlDataAdapter(Command);
+            Adapter.Fill(Table);
+
+           
+            return Table;
         }
         public static bool FechPatient(string username)
         {   
@@ -67,6 +88,26 @@ namespace Exampleproject
                 return true;
             }
             return false;
+        }
+        public static DataTable FechPatientInfo(string username)
+        {
+           
+            connection = new SqlConnection(conecstring);
+            Command = new SqlCommand("FechPatient", connection);
+            Command.CommandType = CommandType.StoredProcedure;
+            SqlParameter param = new SqlParameter("@Username", SqlDbType.VarChar);
+            param.Value = username;
+            Command.Parameters.Add(param);
+
+            connection.Open();
+            Command.ExecuteNonQuery();
+            connection.Close();
+            Table = new DataTable();
+
+            Adapter = new SqlDataAdapter(Command);
+            Adapter.Fill(Table);
+
+            return Table;
         }
 
         public static void Register_Doctor(string Name ,string LastName,string Username,string passcode,string Speciallity,string Bio,string discription)
@@ -127,46 +168,39 @@ namespace Exampleproject
             connection.Close();
 
         }
-        public static DataTable GetMesseges(string username)
+        public static List<string> GetMesseges(string username)
         {   
-            //ყველა შენ მესსიგს გიბრუნებს
-            connection = new SqlConnection(conecstring);
-            Command = new SqlCommand("GetMesseges", connection);
-            Command.CommandType = CommandType.StoredProcedure;
-            SqlParameter param = new SqlParameter("@Username", SqlDbType.VarChar);
-            string hold = Encrypte.Encrypt(username);
-            param.Value = hold.ToString();
-            Command.Parameters.Add(param);
-            connection.Open();
-            Command.ExecuteNonQuery();
-            connection.Close();
-
-            Table = new DataTable();
-            Adapter = new SqlDataAdapter(Command);
-            Adapter.Fill(Table);
-            string temp;
-            DataRow[] tempRow = Table.Select();
-            for (int i = 0; i < Table.Rows.Count; i++)
+          
+        
+            List<String> Values=new List<String>();
+            //აქ სადაც ამ შემთხვევაში ვწერ სახელს უნდა შეიქმნას xml ის ფაილი სადაც შენ ინფორმაციას შეინსახავ და ავტომატურად ჩაიწერება შენი სახელი
+            string myname = username;
+            while (int.Parse(GetAmountM(myname))!=0)
             {
+                //ყველა შენ მესსიგს გიბრუნებს
+                connection = new SqlConnection(conecstring);
+                Command = new SqlCommand("GetMesseges", connection);
+                Command.CommandType = CommandType.StoredProcedure;
+                SqlParameter param = new SqlParameter("@Username", SqlDbType.VarChar);
+                string hold = Encrypte.Encrypt(username);
+                param.Value = hold;
 
-              
-                    for (int j = 0; j < Table.Columns.Count; j++)
-                {
-                    if (j!=0) {
-                        temp = Exampleproject.Encrypte.Decrypt(tempRow[i][j].ToString()).ToString();
-                    }
-                    else
-                    {
-                        temp = tempRow[i][j].ToString();
-                    }        
-    
-                }
-              
-                        
+                Command.Parameters.Add(param);
+                connection.Open();
+                Command.ExecuteNonQuery();
+                connection.Close();
+
+                string holder, holderone;
+                Table = new DataTable();
+                Adapter = new SqlDataAdapter(Command);
+                Adapter.Fill(Table);
+                DataRow[] temp = Table.Select();
+                Values.Add(temp[0][0].ToString());
+                Values.Add(temp[1][0].ToString());
+                Values.Add(temp[2][0].ToString());
+                DeleteM(myname);
             }
-            Table.Clear();
-            Table.Rows.Add(tempRow);
-            return Table;
+            return Values;
         }
 
         public static void SendMessege(int id,string type,string setto,string messege)
@@ -176,20 +210,56 @@ namespace Exampleproject
             Command = new SqlCommand("SendMessege", connection);
             Command.CommandType = CommandType.StoredProcedure;
             SqlParameter[] param = new SqlParameter[4];
-            param[0]= new SqlParameter("@Id", SqlDbType.Int);
-            param[1] = new SqlParameter("@type", SqlDbType.VarChar);
-            param[2] = new SqlParameter("@sentto", SqlDbType.VarChar);
-            param[3] = new SqlParameter("@messege", SqlDbType.VarChar);
+           param[0]= new SqlParameter("@Id", SqlDbType.VarChar);
+           param[1] = new SqlParameter("@type", SqlDbType.VarChar);
+           param[2] = new SqlParameter("@sentto", SqlDbType.VarChar);
+           param[3] = new SqlParameter("@messege", SqlDbType.VarChar);
 
 
-            param[0].Value = id;
-            param[1].Value = Exampleproject.Encrypte.Encrypt(type);
-            param[2].Value = Exampleproject.Encrypte.Encrypt(setto);
-            param[3].Value = Exampleproject.Encrypte.Encrypt( messege);
+            param[0].Value =id;
+            param[1].Value = Encrypte.Encrypt(type);
+            param[2].Value = Encrypte.Encrypt(setto);
+            param[3].Value = Encrypte.Encrypt(messege);
             Command.Parameters.AddRange(param);
             connection.Open();
             Command.ExecuteNonQuery();
             connection.Close();
+        }
+
+        public static string GetAmountM(string name)
+        {
+            connection = new SqlConnection(conecstring);
+            Command = new SqlCommand("getamoutofM", connection);
+            Command.CommandType = CommandType.StoredProcedure;
+            SqlParameter param = new SqlParameter();
+            param = new SqlParameter("@Name", SqlDbType.VarChar);
+            param.Value = Encrypte.Encrypt(name);
+
+            Command.Parameters.Add(param);
+            connection.Open();
+            Command.ExecuteNonQuery();
+            connection.Close();
+
+            DataTable holder = new DataTable();
+            Adapter = new SqlDataAdapter(Command);
+            Adapter.Fill(holder);
+
+            return holder.Rows[0][0].ToString();
+        }
+        public static void DeleteM(String name)
+        {
+            connection = new SqlConnection(conecstring);
+            Command = new SqlCommand("Deletemessege", connection);
+            Command.CommandType = CommandType.StoredProcedure;
+            SqlParameter param = new SqlParameter();
+            param = new SqlParameter("@Username", SqlDbType.VarChar);
+            param.Value = Encrypte.Encrypt(name);
+
+            Command.Parameters.Add(param);
+            connection.Open();
+            Command.ExecuteNonQuery();
+            connection.Close();
+
         }
     }
 }
