@@ -1,0 +1,11 @@
+C:\Users\anaka\Desktop\coding\WindowsFormsDoctor\WindowsFormsDoctor\bin\Debug\WindowsFormsDoctor.exe.config
+C:\Users\anaka\Desktop\coding\WindowsFormsDoctor\WindowsFormsDoctor\bin\Debug\WindowsFormsDoctor.exe
+C:\Users\anaka\Desktop\coding\WindowsFormsDoctor\WindowsFormsDoctor\bin\Debug\WindowsFormsDoctor.pdb
+C:\Users\anaka\Desktop\coding\WindowsFormsDoctor\WindowsFormsDoctor\obj\Debug\WindowsFormsDoctor.csproj.AssemblyReference.cache
+C:\Users\anaka\Desktop\coding\WindowsFormsDoctor\WindowsFormsDoctor\obj\Debug\WindowsFormsDoctor.csproj.SuggestedBindingRedirects.cache
+C:\Users\anaka\Desktop\coding\WindowsFormsDoctor\WindowsFormsDoctor\obj\Debug\WindowsFormsDoctor.Login.resources
+C:\Users\anaka\Desktop\coding\WindowsFormsDoctor\WindowsFormsDoctor\obj\Debug\WindowsFormsDoctor.Properties.Resources.resources
+C:\Users\anaka\Desktop\coding\WindowsFormsDoctor\WindowsFormsDoctor\obj\Debug\WindowsFormsDoctor.csproj.GenerateResource.cache
+C:\Users\anaka\Desktop\coding\WindowsFormsDoctor\WindowsFormsDoctor\obj\Debug\WindowsFormsDoctor.csproj.CoreCompileInputs.cache
+C:\Users\anaka\Desktop\coding\WindowsFormsDoctor\WindowsFormsDoctor\obj\Debug\WindowsFormsDoctor.exe
+C:\Users\anaka\Desktop\coding\WindowsFormsDoctor\WindowsFormsDoctor\obj\Debug\WindowsFormsDoctor.pdb
